@@ -79,9 +79,9 @@ pacman -S --needed firefox libnotify libreoffice-fresh hunspell-{fr,es_es,en_us}
 
 ### 🕹️ Gaming
 ```bash
-pacman -S --needed steam-native-runtime {,lib32-}gamemode
+pacman -S --needed steam {,lib32-}gamemode
 ```
-> **steam-native-runtime**: Steam client  
+> **steam**: Steam client  
 > **gamemode / lib32-gamemode**: optimize performance while gaming
 
 ---
