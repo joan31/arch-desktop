@@ -51,7 +51,8 @@ pacman -S --needed pipewire pipewire-{pulse,jack} wireplumber
 
 ### 🛠️ Shell, Tools & Utilities
 ```bash
-pacman -S --needed zsh git fastfetch htop btop eza bat less tree colordiff man-db lf lm_sensors 7zip fwupd
+pacman -S --needed zsh git fastfetch htop btop eza bat less tree colordiff man-db \
+  lf lm_sensors 7zip fwupd xdg-user-dirs
 ```
 > **zsh**: modern shell  
 > **git**: version control  
@@ -64,7 +65,8 @@ pacman -S --needed zsh git fastfetch htop btop eza bat less tree colordiff man-d
 > **lf**: terminal file manager  
 > **lm_sensors**: hardware sensors  
 > **7zip**: compression  
-> **fwupd**: firmware updater
+> **fwupd**: firmware updater 
+> **xdg-user-dirs**: user directories
 
 ### 🌐 Web, Office & Notifications
 ```bash
@@ -96,9 +98,9 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk breeze-plymouth drkonqi \
   ksystemstats kwallet-pam kwayland kwin layer-shell-qt libkscreen libksysguard \
   libplasma milou ocean-sound-theme oxygen oxygen-sounds plasma-activities \
   plasma-activities-stats plasma-browser-integration plasma-desktop plasma-disks \
-  plasma-firewall plasma-integration plasma-nm plasma-pa plasma-systemmonitor \
-  plasma-workspace plasma-workspace-wallpapers plasma5support plymouth-kcm \
-  polkit-kde-agent powerdevil qqc2-breeze-style sddm-kcm systemsettings \
+  plasma-firewall plasma-integration plasma-login-manager plasma-nm plasma-pa \
+  plasma-systemmonitor plasma-workspace plasma-workspace-wallpapers plasma5support \
+  plymouth-kcm polkit-kde-agent powerdevil qqc2-breeze-style systemsettings \
   xdg-desktop-portal-kde
 ```
 > **aurorae**: window decoration engine  
@@ -133,7 +135,8 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk breeze-plymouth drkonqi \
 > **plasma-desktop**: main Plasma desktop shell  
 > **plasma-disks**: monitor disk health (SMART)  
 > **plasma-firewall**: firewall management GUI  
-> **plasma-integration**: Qt integration in Plasma  
+> **plasma-integration**: Qt integration in Plasma
+> **plasma-login-manager**: SDDM settings in System Settings  
 > **plasma-nm**: network manager applet  
 > **plasma-pa**: audio volume applet  
 > **plasma-systemmonitor**: system monitoring app  
@@ -143,7 +146,6 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk breeze-plymouth drkonqi \
 > **polkit-kde-agent**: PolicyKit authentication agent  
 > **powerdevil**: power management daemon  
 > **qqc2-breeze-style**: Breeze style for Qt Quick Controls 2  
-> **sddm-kcm**: SDDM settings in System Settings  
 > **systemsettings**: Plasma system configuration tool  
 > **xdg-desktop-portal-kde**: desktop portal implementation for KDE
 
@@ -156,9 +158,9 @@ pacman -S --needed dolphin ffmpegthumbs ark kwallet
 > **Ark**: archive manager  
 > **KWallet**: secure password storage (system keyring)
 
-### 🪟 Enable Display Manager (SDDM)
+### 🪟 Enable Display Manager (Plasma Login Manager)
 ```bash
-systemctl enable sddm.service
+systemctl enable plasmalogin.service
 ```
 > Enable graphical login
 
@@ -169,7 +171,7 @@ systemctl enable sddm.service
 ### 🖼️ Hyprland Environment
 ```bash
 pacman -S --needed hyprland swww waybar rofi mako hypridle hyprlock wl-clipboard cliphist \
-  grim slurp swappy qt{5,6}{ct,-wayland} xdg-{user-dirs,desktop-portal-{gtk,hyprland}}
+  grim slurp swappy qt{5,6}{ct,-wayland} xdg-{desktop-portal-{gtk,hyprland}}
 ```
 > **hyprland**: window manager (Wayland)  
 > **swww**: wallpaper manager  
@@ -181,7 +183,7 @@ pacman -S --needed hyprland swww waybar rofi mako hypridle hyprlock wl-clipboard
 > **wl-clipboard / cliphist**: clipboard tools  
 > **grim / slurp / swappy**: screenshot utilities  
 > **qt5ct / qt6ct**: Qt theming control  
-> **xdg-user-dirs / xdg-desktop-portal-gtk / xdg-desktop-portal-hyprland**: XDG portals
+> **xdg-desktop-portal-gtk / xdg-desktop-portal-hyprland**: XDG portals
 
 ### 📦 Core Apps
 ```bash
@@ -230,7 +232,7 @@ yay
 
 ### 🎉 Install User Applications
 ```bash
-yay -S arch-update vscodium-bin ventoy-bin proton-ge-custom-bin xpadneo-dkms-git {,lib32-}mangohud-git kdrive-bin
+yay -S arch-update vscodium-bin ventoy-bin proton-ge-custom-bin xpadneo-dkms-git {,lib32-}mangohud-git kdrive-bin rtl8761b-firmware
 ```
 > **arch-update**: Arch Linux update notifier  
 > **vscodium-bin**: open-source build of VS Code  
@@ -239,6 +241,7 @@ yay -S arch-update vscodium-bin ventoy-bin proton-ge-custom-bin xpadneo-dkms-git
 > **xpadneo-dkms-git**: Xbox controller driver  
 > **mangohud / lib32-mangohud**: FPS overlay and performance metrics  
 > **kdrive-bin**: Infomaniak kDrive client
+> **rtl8761b-firmware**: TP-Link USB Bluetooth old firmware with better stability
 
 ---
 
