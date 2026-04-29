@@ -73,18 +73,27 @@ pacman -S --needed zsh git fastfetch htop btop eza bat less tree colordiff man-d
 pacman -S --needed firefox libnotify libreoffice-fresh hunspell-{fr,es_es,en_us} gimp keepassxc
 ```
 > **Firefox**: web browser  
-> **libnotify**: notifications support  
+> **libnotify**: Firefox notifications support  
 > **LibreOffice Fresh**: office suite  
 > **hunspell-xxx**: spell-check dictionaries (French, Spanish, English)  
 > **GIMP**: image editor  
 > **KeePassXC**: password manager
 
+### 🔤 Fonts
+```bash
+pacman -S --needed ttf-{dejavu,liberation,nerd-fonts-symbols} noto-fonts{,-{emoji,cjk,extra}}
+```
+> **DejaVu / Liberation**: standard system fonts (compatibilité + fallback)
+> **Noto Fonts**: large Unicode coverage (emoji, CJK, extra scripts)
+> **Nerd Fonts Symbols**: icons for terminal (powerline, dev, etc.)
+
 ### 🕹️ Gaming
 ```bash
-pacman -S --needed steam {,lib32-}gamemode
+pacman -S --needed steam {,lib32-}{gamemode,mangohud}
 ```
 > **steam**: Steam client  
 > **gamemode / lib32-gamemode**: optimize performance while gaming
+> **mangohud / lib32-mangohud**: FPS overlay and performance metrics  
 
 ---
 
@@ -115,7 +124,7 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk breeze-plymouth drkonqi \
 > **kgamma**: monitor gamma settings  
 > **kglobalacceld**: global shortcut daemon  
 > **kinfocenter**: system information center  
-> **kmenuedit**: application menu editor  
+> **kmenuedit**: application menu editor
 > **kpipewire**: PipeWire integration for Plasma  
 > **kscreen**: display configuration  
 > **kscreenlocker**: screen locker  
@@ -151,12 +160,14 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk breeze-plymouth drkonqi \
 
 ### 📦 Core Apps
 ```bash
-pacman -S --needed dolphin ffmpegthumbs ark kwallet
+pacman -S --needed code dolphin ffmpegthumbs ark kwallet konsole
 ```
+> **code**: the open source build of VSCode editor  
 > **Dolphin**: file manager  
 > **ffmpegthumbs**: video thumbnails in Dolphin  
 > **Ark**: archive manager  
 > **KWallet**: secure password storage (system keyring)
+> **Konsole**: KDE terminal emulator  
 
 ### 🪟 Enable Display Manager (Plasma Login Manager)
 ```bash
@@ -183,7 +194,7 @@ pacman -S --needed hyprland swww waybar rofi mako hypridle hyprlock wl-clipboard
 > **wl-clipboard / cliphist**: clipboard tools  
 > **grim / slurp / swappy**: screenshot utilities  
 > **qt5ct / qt6ct**: Qt theming control  
-> **xdg-desktop-portal-gtk / xdg-desktop-portal-hyprland**: XDG portals
+> **xdg-desktop-portal-gtk / xdg-desktop-portal-hyprland**: XDG portals (GTK needed for file-picker)
 
 ### 📦 Core Apps
 ```bash
@@ -207,7 +218,7 @@ pacman -S --needed pulsemixer bluez-utils cava
 ```bash
 pacman -S --needed gnome-keyring gnome-themes-extra gtk-engine-murrine xsettingsd
 ```
-> **gnome-keyring**: password/key manager  
+> **gnome-keyring**: system password/key manager for kDrive cloud  
 > **gnome-themes-extra**: extra GTK themes  
 > **gtk-engine-murrine**: GTK2 theme engine  
 > **xsettingsd**: XSettings daemon for GTK themes
@@ -235,11 +246,9 @@ yay
 yay -S arch-update vscodium-bin ventoy-bin proton-ge-custom-bin xpadneo-dkms-git {,lib32-}mangohud-git kdrive-bin rtl8761b-firmware
 ```
 > **arch-update**: Arch Linux update notifier  
-> **vscodium-bin**: open-source build of VS Code  
 > **ventoy-bin**: bootable USB creation tool  
 > **proton-ge-custom-bin**: custom Proton build for gaming  
 > **xpadneo-dkms-git**: Xbox controller driver  
-> **mangohud / lib32-mangohud**: FPS overlay and performance metrics  
 > **kdrive-bin**: Infomaniak kDrive client
 > **rtl8761b-firmware**: TP-Link USB Bluetooth old firmware with better stability
 
