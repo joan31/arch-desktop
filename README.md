@@ -52,7 +52,7 @@ pacman -S --needed pipewire pipewire-{pulse,jack} wireplumber
 ### 🛠️ Shell, Tools & Utilities
 ```bash
 pacman -S --needed zsh git fastfetch htop btop eza bat less tree colordiff man-db \
-  lf lm_sensors 7zip fwupd xdg-user-dirs
+  lf bc lm_sensors 7zip fwupd xdg-user-dirs
 ```
 > **zsh**: modern shell  
 > **git**: version control  
@@ -62,7 +62,8 @@ pacman -S --needed zsh git fastfetch htop btop eza bat less tree colordiff man-d
 > **bat**: modern replacement for `cat`  
 > **less / tree / colordiff**: file browsing & diff tools  
 > **man-db**: manual pages  
-> **lf**: terminal file manager  
+> **lf**: terminal file manager
+> **bc**: command line calculator
 > **lm_sensors**: hardware sensors  
 > **7zip**: compression  
 > **fwupd**: firmware updater 
@@ -70,11 +71,11 @@ pacman -S --needed zsh git fastfetch htop btop eza bat less tree colordiff man-d
 
 ### 🌐 Web, Office & Notifications
 ```bash
-pacman -S --needed firefox libnotify libreoffice-fresh hunspell-{fr,es_es,en_us} gimp keepassxc
+pacman -S --needed firefox libnotify libreoffice-fresh{,-fr} hunspell-{fr,es_es,en_us} gimp keepassxc
 ```
 > **Firefox**: web browser  
 > **libnotify**: Firefox notifications support  
-> **LibreOffice Fresh**: office suite  
+> **LibreOffice Fresh**: office suite (optional french interface language)
 > **hunspell-xxx**: spell-check dictionaries (French, Spanish, English)  
 > **GIMP**: image editor  
 > **KeePassXC**: password manager
@@ -101,20 +102,20 @@ pacman -S --needed steam {,lib32-}{gamemode,mangohud}
 
 ### 🖼️ Plasma Desktop
 ```bash
-pacman -S --needed aurorae bluedevil breeze breeze-gtk breeze-plymouth drkonqi \
+pacman -S --needed aurorae bluedevil breeze breeze-gtk drkonqi \
   kactivitymanagerd kde-cli-tools kde-gtk-config kdecoration kdeplasma-addons \
-  kgamma kglobalacceld kinfocenter kmenuedit kpipewire kscreen kscreenlocker \
+  kgamma kglobalacceld kinfocenter kmenuedit knighttime kpipewire kscreen kscreenlocker \
   ksystemstats kwallet-pam kwayland kwin layer-shell-qt libkscreen libksysguard \
-  libplasma milou ocean-sound-theme oxygen oxygen-sounds plasma-activities \
+  libplasma milou ocean-sound-theme oxygen oxygen-cursors oxygen-sounds plasma-activities \
   plasma-activities-stats plasma-browser-integration plasma-desktop plasma-disks \
   plasma-firewall plasma-integration plasma-login-manager plasma-nm plasma-pa \
   plasma-systemmonitor plasma-workspace plasma-workspace-wallpapers plasma5support \
-  plymouth-kcm polkit-kde-agent powerdevil qqc2-breeze-style systemsettings \
+  plymouth-kcm polkit-kde-agent powerdevil qqc2-breeze-style spectacle systemsettings \
   xdg-desktop-portal-kde
 ```
 > **aurorae**: window decoration engine  
 > **bluedevil**: Bluetooth integration  
-> **breeze / breeze-gtk / breeze-plymouth**: default KDE themes  
+> **breeze / breeze-gtk**: default KDE themes  
 > **drkonqi**: crash handler  
 > **kactivitymanagerd**: activity manager daemon  
 > **kde-cli-tools**: command-line tools for KDE  
@@ -125,6 +126,7 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk breeze-plymouth drkonqi \
 > **kglobalacceld**: global shortcut daemon  
 > **kinfocenter**: system information center  
 > **kmenuedit**: application menu editor
+> **knighttime**: helpers for scheduling the dark-light cycle
 > **kpipewire**: PipeWire integration for Plasma  
 > **kscreen**: display configuration  
 > **kscreenlocker**: screen locker  
@@ -138,7 +140,8 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk breeze-plymouth drkonqi \
 > **libplasma**: Plasma core libraries  
 > **milou**: search widget (KRunner frontend)  
 > **ocean-sound-theme / oxygen-sounds**: sound themes  
-> **oxygen**: Oxygen widget style  
+> **oxygen**: Oxygen widget style
+> **oxygen-cursors**: Oxygen cursors
 > **plasma-activities / plasma-activities-stats**: activity tracking  
 > **plasma-browser-integration**: browser integration with Plasma  
 > **plasma-desktop**: main Plasma desktop shell  
@@ -153,21 +156,26 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk breeze-plymouth drkonqi \
 > **plasma5support**: compatibility libraries for old Plasma 5 code  
 > **plymouth-kcm**: settings module for Plymouth  
 > **polkit-kde-agent**: PolicyKit authentication agent  
-> **powerdevil**: power management daemon  
+> **powerdevil**: power management daemon
+> **spectacle**: screenshot capture utility
 > **qqc2-breeze-style**: Breeze style for Qt Quick Controls 2  
 > **systemsettings**: Plasma system configuration tool  
 > **xdg-desktop-portal-kde**: desktop portal implementation for KDE
 
 ### 📦 Core Apps
 ```bash
-pacman -S --needed code dolphin ffmpegthumbs ark kwallet konsole
+pacman -S --needed code kcalc dolphin kdegraphics-thumbnailers kdf ffmpegthumbs ark kwallet konsole partitionmanager 
 ```
-> **code**: the open source build of VSCode editor  
-> **Dolphin**: file manager  
+> **code**: the open source build of VSCode editor
+> **kcalc**: calculator
+> **Dolphin**: file manager
+> **kdegraphics-thumbnailers**: PDF and PS thumbnails
+> **kdf**: view disk usage
 > **ffmpegthumbs**: video thumbnails in Dolphin  
 > **Ark**: archive manager  
 > **KWallet**: secure password storage (system keyring)
-> **Konsole**: KDE terminal emulator  
+> **Konsole**: KDE terminal emulator
+> **PartitionManager**: KDE utility to manage disks, partitions and file systems
 
 ### 🪟 Enable Display Manager (Plasma Login Manager)
 ```bash
