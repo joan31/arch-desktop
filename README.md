@@ -62,30 +62,32 @@ pacman -S --needed zsh git fastfetch htop btop eza bat less tree colordiff man-d
 > **bat**: modern replacement for `cat`  
 > **less / tree / colordiff**: file browsing & diff tools  
 > **man-db**: manual pages  
-> **lf**: terminal file manager
-> **bc**: command line calculator
+> **lf**: terminal file manager  
+> **bc**: command line calculator  
 > **lm_sensors**: hardware sensors  
 > **7zip**: compression  
-> **fwupd**: firmware updater 
+> **fwupd**: firmware updater  
 > **xdg-user-dirs**: user directories
 
 ### 🌐 Web, Office & Notifications
 ```bash
-pacman -S --needed firefox libnotify libreoffice-fresh{,-fr} hunspell-{fr,es_es,en_us} gimp keepassxc
+pacman -S --needed firefox libnotify libreoffice-fresh{,-fr} hunspell-{fr,es_es,en_us} \
+  gimp keepassxc discord
 ```
 > **Firefox**: web browser  
 > **libnotify**: Firefox notifications support  
-> **LibreOffice Fresh**: office suite (optional french interface language)
+> **LibreOffice Fresh**: office suite (optional french interface language)  
 > **hunspell-xxx**: spell-check dictionaries (French, Spanish, English)  
 > **GIMP**: image editor  
-> **KeePassXC**: password manager
+> **KeePassXC**: password manager  
+> **Discord**: voice and text chat
 
 ### 🔤 Fonts
 ```bash
 pacman -S --needed ttf-{dejavu,liberation,nerd-fonts-symbols} noto-fonts{,-{emoji,cjk,extra}}
 ```
-> **DejaVu / Liberation**: standard system fonts (compatibilité + fallback)
-> **Noto Fonts**: large Unicode coverage (emoji, CJK, extra scripts)
+> **DejaVu / Liberation**: standard system fonts (compatibilité + fallback)  
+> **Noto Fonts**: large Unicode coverage (emoji, CJK, extra scripts)  
 > **Nerd Fonts Symbols**: icons for terminal (powerline, dev, etc.)
 
 ### 🕹️ Gaming
@@ -93,8 +95,8 @@ pacman -S --needed ttf-{dejavu,liberation,nerd-fonts-symbols} noto-fonts{,-{emoj
 pacman -S --needed steam {,lib32-}{gamemode,mangohud}
 ```
 > **steam**: Steam client  
-> **gamemode / lib32-gamemode**: optimize performance while gaming
-> **mangohud / lib32-mangohud**: FPS overlay and performance metrics  
+> **gamemode / lib32-gamemode**: optimize performance while gaming  
+> **mangohud / lib32-mangohud**: FPS overlay and performance metrics
 
 ---
 
@@ -125,8 +127,8 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk drkonqi \
 > **kgamma**: monitor gamma settings  
 > **kglobalacceld**: global shortcut daemon  
 > **kinfocenter**: system information center  
-> **kmenuedit**: application menu editor
-> **knighttime**: helpers for scheduling the dark-light cycle
+> **kmenuedit**: application menu editor  
+> **knighttime**: helpers for scheduling the dark-light cycle  
 > **kpipewire**: PipeWire integration for Plasma  
 > **kscreen**: display configuration  
 > **kscreenlocker**: screen locker  
@@ -140,14 +142,14 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk drkonqi \
 > **libplasma**: Plasma core libraries  
 > **milou**: search widget (KRunner frontend)  
 > **ocean-sound-theme / oxygen-sounds**: sound themes  
-> **oxygen**: Oxygen widget style
-> **oxygen-cursors**: Oxygen cursors
+> **oxygen**: Oxygen widget style  
+> **oxygen-cursors**: Oxygen cursors  
 > **plasma-activities / plasma-activities-stats**: activity tracking  
 > **plasma-browser-integration**: browser integration with Plasma  
 > **plasma-desktop**: main Plasma desktop shell  
 > **plasma-disks**: monitor disk health (SMART)  
 > **plasma-firewall**: firewall management GUI  
-> **plasma-integration**: Qt integration in Plasma
+> **plasma-integration**: Qt integration in Plasma  
 > **plasma-login-manager**: SDDM settings in System Settings  
 > **plasma-nm**: network manager applet  
 > **plasma-pa**: audio volume applet  
@@ -156,26 +158,31 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk drkonqi \
 > **plasma5support**: compatibility libraries for old Plasma 5 code  
 > **plymouth-kcm**: settings module for Plymouth  
 > **polkit-kde-agent**: PolicyKit authentication agent  
-> **powerdevil**: power management daemon
-> **spectacle**: screenshot capture utility
+> **powerdevil**: power management daemon  
+> **spectacle**: screenshot capture utility  
 > **qqc2-breeze-style**: Breeze style for Qt Quick Controls 2  
 > **systemsettings**: Plasma system configuration tool  
 > **xdg-desktop-portal-kde**: desktop portal implementation for KDE
 
 ### 📦 Core Apps
 ```bash
-pacman -S --needed code kcalc dolphin kdegraphics-thumbnailers kdf ffmpegthumbs ark kwallet konsole partitionmanager 
+pacman -S --needed code kcalc dolphin kdegraphics-thumbnailers kdf ffmpegthumbs ark kwallet konsole \
+  partitionmanager gwenview okular kdeconnect vlc{,-plugins-all}
 ```
-> **code**: the open source build of VSCode editor
-> **kcalc**: calculator
-> **Dolphin**: file manager
-> **kdegraphics-thumbnailers**: PDF and PS thumbnails
-> **kdf**: view disk usage
+> **code**: the open source build of VSCode editor  
+> **kcalc**: calculator  
+> **Dolphin**: file manager  
+> **kdegraphics-thumbnailers**: PDF and PS thumbnails  
+> **kdf**: view disk usage  
 > **ffmpegthumbs**: video thumbnails in Dolphin  
 > **Ark**: archive manager  
-> **KWallet**: secure password storage (system keyring)
-> **Konsole**: KDE terminal emulator
-> **PartitionManager**: KDE utility to manage disks, partitions and file systems
+> **KWallet**: secure password storage (system keyring)  
+> **Konsole**: KDE terminal emulator  
+> **PartitionManager**: KDE utility to manage disks, partitions and file systems  
+> **Gwenview**: image viewer  
+> **Okular**: PDF reader  
+> **KDEConnect**: communication with smartphone  
+> **VLC**: multimedia player
 
 ### 🪟 Enable Display Manager (Plasma Login Manager)
 ```bash
@@ -257,7 +264,7 @@ yay -S arch-update vscodium-bin ventoy-bin proton-ge-custom-bin xpadneo-dkms-git
 > **ventoy-bin**: bootable USB creation tool  
 > **proton-ge-custom-bin**: custom Proton build for gaming  
 > **xpadneo-dkms-git**: Xbox controller driver  
-> **kdrive-bin**: Infomaniak kDrive client
+> **kdrive-bin**: Infomaniak kDrive client  
 > **rtl8761b-firmware**: TP-Link USB Bluetooth old firmware with better stability
 
 ---
