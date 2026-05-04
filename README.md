@@ -150,7 +150,7 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk drkonqi \
 > **plasma-disks**: monitor disk health (SMART)  
 > **plasma-firewall**: firewall management GUI  
 > **plasma-integration**: Qt integration in Plasma  
-> **plasma-login-manager**: SDDM settings in System Settings  
+> **plasma-login-manager**: Plasma display manager (replace SDDM)  
 > **plasma-nm**: network manager applet  
 > **plasma-pa**: audio volume applet  
 > **plasma-systemmonitor**: system monitoring app  
@@ -196,11 +196,11 @@ systemctl enable plasmalogin.service
 
 ### 🖼️ Hyprland Environment
 ```bash
-pacman -S --needed hyprland swww waybar rofi mako hypridle hyprlock wl-clipboard cliphist \
+pacman -S --needed hyprland awww waybar rofi mako hypridle hyprlock wl-clipboard cliphist \
   grim slurp swappy qt{5,6}{ct,-wayland} xdg-{desktop-portal-{gtk,hyprland}}
 ```
 > **hyprland**: window manager (Wayland)  
-> **swww**: wallpaper manager  
+> **awww**: wallpaper manager  
 > **waybar**: status bar  
 > **rofi**: app launcher  
 > **mako**: notifications daemon  
@@ -258,14 +258,14 @@ yay
 
 ### 🎉 Install User Applications
 ```bash
-yay -S arch-update vscodium-bin ventoy-bin proton-ge-custom-bin xpadneo-dkms-git {,lib32-}mangohud-git kdrive-bin rtl8761b-firmware
+yay -S arch-update ventoy-bin proton-ge-custom-bin xpadneo-dkms-git kdrive-bin rtl8761b-firmware
 ```
 > **arch-update**: Arch Linux update notifier  
 > **ventoy-bin**: bootable USB creation tool  
 > **proton-ge-custom-bin**: custom Proton build for gaming  
 > **xpadneo-dkms-git**: Xbox controller driver  
 > **kdrive-bin**: Infomaniak kDrive client  
-> **rtl8761b-firmware**: TP-Link USB Bluetooth old firmware with better stability
+> **rtl8761b-firmware**: TP-Link UB500 USB Bluetooth Adapter old firmware with better stability
 
 ---
 
