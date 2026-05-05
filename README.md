@@ -15,13 +15,13 @@ We will cover **common setup steps**, then branch into two chapters: **Plasma Mi
 ---
 
 ## 📚 Table of Contents
-- [⚙️ Common Setup](#-common-setup-de-wm-independent)
-- [🖥️ Plasma Minimal Setup](#-plasma-minimal-setup)
-  - [🖼️ Plasma Desktop](#-plasma-desktop)
+- [⚙️ Common Setup](#️-common-setup-de-wm-independent)
+- [🖥️ Plasma Minimal Setup](#️-plasma-minimal-setup)
+  - [🖼️ Plasma Desktop](#️-plasma-desktop)
   - [📦 Core Apps](#-core-apps)
   - [🪟 Enable Display Manager (Plasma Login Manager)](#-enable-display-manager-plasma-login-manager)
 - [🌌 Hyprland Setup](#-hyprland-setup)
-  - [🖼️ Hyprland Environment](#-hyprland-environment)
+  - [🖼️ Hyprland Environment](#️-hyprland-environment)
   - [📦 Core Apps](#-core-apps-1)
   - [🔊 Audio & Bluetooth Extras](#-audio--bluetooth-extras)
   - [🎨 Theming & Keyring](#-theming--keyring)
