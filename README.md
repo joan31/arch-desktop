@@ -19,7 +19,7 @@ We will cover **common setup steps**, then branch into two chapters: **Plasma Mi
 - [🖥️ Plasma Minimal Setup](#-plasma-minimal-setup)
   - [🖼️ Plasma Desktop](#-plasma-desktop)
   - [📦 Core Apps](#-core-apps)
-  - [🪟 Enable Display Manager (SDDM)](#-enable-display-manager-sddm)
+  - [🪟 Enable Display Manager (Plasma Login Manager)](#-enable-display-manager-plasma-login-manager)
 - [🌌 Hyprland Setup](#-hyprland-setup)
   - [🖼️ Hyprland Environment](#-hyprland-environment)
   - [📦 Core Apps](#-core-apps-1)
