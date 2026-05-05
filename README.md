@@ -166,14 +166,13 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk drkonqi \
 
 ### 📦 Core Apps
 ```bash
-pacman -S --needed code kcalc dolphin kdegraphics-thumbnailers kdf ffmpegthumbs ark kwallet konsole \
+pacman -S --needed code kcalc dolphin kdegraphics-thumbnailers ffmpegthumbs ark kwallet konsole \
   partitionmanager gwenview okular kdeconnect vlc{,-plugins-all}
 ```
 > **code**: the open source build of VSCode editor  
 > **kcalc**: calculator  
 > **Dolphin**: file manager  
 > **kdegraphics-thumbnailers**: PDF and PS thumbnails  
-> **kdf**: view disk usage  
 > **ffmpegthumbs**: video thumbnails in Dolphin  
 > **Ark**: archive manager  
 > **KWallet**: secure password storage (system keyring)  
