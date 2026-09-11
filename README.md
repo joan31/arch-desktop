@@ -19,6 +19,7 @@ We will cover **common setup steps**, then branch into two chapters: **Plasma Mi
 - [🖥️ Plasma Minimal Setup](#️-plasma-minimal-setup)
   - [🖼️ Plasma Desktop](#️-plasma-desktop)
   - [📦 Core Apps](#-core-apps)
+  - [📦 Optional Apps](#-optional-apps)
   - [🪟 Enable Display Manager (Plasma Login Manager)](#-enable-display-manager-plasma-login-manager)
 - [🌌 Hyprland Setup](#-hyprland-setup)
   - [🖼️ Hyprland Environment](#️-hyprland-environment)
@@ -103,21 +104,23 @@ pacman -S --needed steam {,lib32-}{gamemode,mangohud}
 ## 🖥️ Plasma Minimal Setup
 
 ### 🖼️ Plasma Desktop
+
 ```bash
-pacman -S --needed aurorae bluedevil breeze breeze-gtk drkonqi \
+pacman -S --needed aurorae bluedevil breeze breeze-cursors breeze-gtk breeze-plymouth drkonqi \
   kactivitymanagerd kde-cli-tools kde-gtk-config kdecoration kdeplasma-addons \
   kgamma kglobalacceld kinfocenter kmenuedit knighttime kpipewire kscreen kscreenlocker \
-  ksystemstats kwallet-pam kwayland kwin layer-shell-qt libkscreen libksysguard \
+  ksshaskpass ksystemstats kwallet-pam kwayland kwin layer-shell-qt libkscreen libksysguard \
   libplasma milou ocean-sound-theme oxygen oxygen-cursors oxygen-sounds plasma-activities \
   plasma-activities-stats plasma-browser-integration plasma-desktop plasma-disks \
   plasma-firewall plasma-integration plasma-login-manager plasma-nm plasma-pa \
   plasma-systemmonitor plasma-workspace plasma-workspace-wallpapers plasma5support \
   plymouth-kcm polkit-kde-agent powerdevil qqc2-breeze-style spectacle systemsettings \
-  xdg-desktop-portal-kde
+  union xdg-desktop-portal-kde
 ```
+
 > **aurorae**: window decoration engine  
 > **bluedevil**: Bluetooth integration  
-> **breeze / breeze-gtk**: default KDE themes  
+> **breeze / breeze-cursors / breeze-gtk / breeze-plymouth**: default KDE themes  
 > **drkonqi**: crash handler  
 > **kactivitymanagerd**: activity manager daemon  
 > **kde-cli-tools**: command-line tools for KDE  
@@ -132,10 +135,11 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk drkonqi \
 > **kpipewire**: PipeWire integration for Plasma  
 > **kscreen**: display configuration  
 > **kscreenlocker**: screen locker  
+> **ksshaskpass**: graphical SSH authentication/passphrase prompt for Plasma; also an optional dependency of `code` for SSH authentication  
 > **ksystemstats**: system statistics service  
-> **kwallet-pam**: KWallet integration with PAM  
+> **kwallet-pam**: PAM integration to automatically unlock KWallet when opening the Plasma session  
 > **kwayland**: Wayland support libraries  
-> **kwin**: window manager/compositor  
+> **kwin**: Wayland window manager and compositor  
 > **layer-shell-qt**: layer-shell protocol support for Qt  
 > **libkscreen**: backend for display management  
 > **libksysguard**: system monitor libraries  
@@ -144,50 +148,65 @@ pacman -S --needed aurorae bluedevil breeze breeze-gtk drkonqi \
 > **ocean-sound-theme / oxygen-sounds**: sound themes  
 > **oxygen**: Oxygen widget style  
 > **oxygen-cursors**: Oxygen cursors  
-> **plasma-activities / plasma-activities-stats**: activity tracking  
+> **plasma-activities / plasma-activities-stats**: activity management and usage statistics  
 > **plasma-browser-integration**: browser integration with Plasma  
 > **plasma-desktop**: main Plasma desktop shell  
 > **plasma-disks**: monitor disk health (SMART)  
 > **plasma-firewall**: firewall management GUI  
 > **plasma-integration**: Qt integration in Plasma  
-> **plasma-login-manager**: Plasma display manager (replace SDDM)  
-> **plasma-nm**: network manager applet  
-> **plasma-pa**: audio volume applet  
-> **plasma-systemmonitor**: system monitoring app  
-> **plasma-workspace / plasma-workspace-wallpapers**: Plasma workspace & wallpapers  
-> **plasma5support**: compatibility libraries for old Plasma 5 code  
-> **plymouth-kcm**: settings module for Plymouth  
+> **plasma-login-manager**: Plasma display manager, used instead of SDDM  
+> **plasma-nm**: NetworkManager integration and network applet  
+> **plasma-pa**: PipeWire/PulseAudio volume control applet  
+> **plasma-systemmonitor**: system monitoring application  
+> **plasma-workspace / plasma-workspace-wallpapers**: Plasma workspace and wallpapers  
+> **plasma5support**: compatibility libraries for legacy Plasma 5 components  
+> **plymouth-kcm**: Plasma settings module for Plymouth  
 > **polkit-kde-agent**: PolicyKit authentication agent  
 > **powerdevil**: power management daemon  
-> **spectacle**: screenshot capture utility  
 > **qqc2-breeze-style**: Breeze style for Qt Quick Controls 2  
+> **spectacle**: screenshot and screen capture utility  
 > **systemsettings**: Plasma system configuration tool  
-> **xdg-desktop-portal-kde**: desktop portal implementation for KDE
+> **union**: KDE application style providing unified theming for Qt Widgets and Qt Quick applications  
+> **xdg-desktop-portal-kde**: desktop portal implementation for KDE/Wayland
 
 ### 📦 Core Apps
+
 ```bash
 pacman -S --needed code kcalc dolphin kdegraphics-thumbnailers ffmpegthumbs ark kwallet konsole \
   partitionmanager gwenview okular kdeconnect vlc{,-plugins-all}
 ```
-> **code**: the open source build of VSCode editor  
+
+> **code**: open-source build of Visual Studio Code  
 > **kcalc**: calculator  
-> **Dolphin**: file manager  
-> **kdegraphics-thumbnailers**: PDF and PS thumbnails  
+> **dolphin**: KDE file manager  
+> **kdegraphics-thumbnailers**: PDF and PostScript thumbnails in Dolphin  
 > **ffmpegthumbs**: video thumbnails in Dolphin  
-> **Ark**: archive manager  
-> **KWallet**: secure password storage (system keyring)  
-> **Konsole**: KDE terminal emulator  
-> **PartitionManager**: KDE utility to manage disks, partitions and file systems  
-> **Gwenview**: image viewer  
-> **Okular**: PDF reader  
-> **KDEConnect**: communication with smartphone  
-> **VLC**: multimedia player
+> **ark**: archive manager  
+> **kwallet**: KDE system credential store, used by applications such as kDrive to securely persist authentication credentials/tokens (KDE system keyring)  
+> **konsole**: KDE terminal emulator  
+> **partitionmanager**: KDE utility to manage disks, partitions and file systems  
+> **gwenview**: image viewer  
+> **okular**: document and PDF viewer  
+> **kdeconnect**: integration and communication with smartphones  
+> **vlc / vlc-plugins-all**: multimedia player and complete plugin set
+
+### 📦 Optional Apps
+
+```bash
+pacman -S --needed kup
+```
+
+> **kup**: KDE backup scheduler and frontend integrated with Plasma. It can automatically back up user data to another disk or storage location and supports versioned backup workflows through supported backup engines. It is particularly useful for configuring automatic backups of `/home` to a secondary disk on desktop or laptop systems.
+
+Kup is entirely optional and does not need to be installed if backups are already managed through another solution **or if backup functionality is simply not required on the system**.
 
 ### 🪟 Enable Display Manager (Plasma Login Manager)
+
 ```bash
 systemctl enable plasmalogin.service
 ```
-> Enable graphical login
+
+> Enable Plasma Login Manager as the graphical login manager.
 
 ---
 
