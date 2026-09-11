@@ -72,7 +72,7 @@ pacman -S --needed zsh git fastfetch htop btop eza bat less tree colordiff man-d
 
 ### 🌐 Web, Office & Notifications
 ```bash
-pacman -S --needed firefox libnotify libreoffice-fresh{,-fr} hunspell-{fr,es_es,en_us} \
+pacman -S --needed firefox libnotify libreoffice-fresh{,-fr} hunspell-{fr-comprehensive,es_es,en_us} \
   gimp keepassxc discord
 ```
 > **Firefox**: web browser  
@@ -93,11 +93,12 @@ pacman -S --needed ttf-{dejavu,liberation,nerd-fonts-symbols} noto-fonts{,-{emoj
 
 ### 🕹️ Gaming
 ```bash
-pacman -S --needed steam {,lib32-}{gamemode,mangohud}
+pacman -S --needed steam {,lib32-}{gamemode,mangohud} gamescope
 ```
 > **steam**: Steam client  
 > **gamemode / lib32-gamemode**: optimize performance while gaming  
-> **mangohud / lib32-mangohud**: FPS overlay and performance metrics
+> **mangohud / lib32-mangohud**: FPS overlay and performance metrics  
+> **gamescope**: optional gaming micro-compositor for resolution scaling, FSR, FPS limiting, HDR, and game isolation
 
 ---
 
