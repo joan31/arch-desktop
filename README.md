@@ -193,12 +193,12 @@ pacman -S --needed code kcalc dolphin kdegraphics-thumbnailers ffmpegthumbs ark 
 ### 📦 Optional Apps
 
 ```bash
-pacman -S --needed kup
+pacman -S --needed kate kup power-profiles-daemon
 ```
 
+> **kate**: KDE text editor providing both Kate and KWrite. KWrite offers a simple text editor interface, while Kate provides more advanced editing and development features.  
 > **kup**: KDE backup scheduler and frontend integrated with Plasma. It can automatically back up user data to another disk or storage location and supports versioned backup workflows through supported backup engines. It is particularly useful for configuring automatic backups of `/home` to a secondary disk on desktop or laptop systems.
-
-Kup is entirely optional and does not need to be installed if backups are already managed through another solution **or if backup functionality is simply not required on the system**.
+> **power-profiles-daemon**: power profile management for laptops, integrated with Plasma PowerDevil (Performance / Balanced / Power Save)
 
 ### 🪟 Enable Display Manager (Plasma Login Manager)
 
@@ -251,7 +251,7 @@ pacman -S --needed pulsemixer bluez-utils cava
 ```bash
 pacman -S --needed gnome-keyring gnome-themes-extra gtk-engine-murrine xsettingsd
 ```
-> **gnome-keyring**: system password/key manager for kDrive cloud  
+> **gnome-keyring**: system credential store, used by applications such as kDrive to securely persist authentication credentials/tokens  
 > **gnome-themes-extra**: extra GTK themes  
 > **gtk-engine-murrine**: GTK2 theme engine  
 > **xsettingsd**: XSettings daemon for GTK themes
