@@ -8,7 +8,7 @@
 **Plasma Minimal OR Hyprland — your choice!**
 
 This guide assumes you already have a **base Arch Linux system installed**  
-👉 See [Arch-Fortress](https://github.com/joan31/arch-fortress) for a secure and minimal base install.
+👉 See [Arch-Aegis](https://github.com/joan31/arch-aegis) for a secure and minimal base install.
 
 We will cover **common setup steps**, then branch into two chapters: **Plasma Minimal** or **Hyprland**.
 
