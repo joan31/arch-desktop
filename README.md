@@ -198,7 +198,7 @@ pacman -S --needed kate kup power-profiles-daemon
 ```
 
 > **kate**: KDE text editor providing both Kate and KWrite. KWrite offers a simple text editor interface, while Kate provides more advanced editing and development features.  
-> **kup**: KDE backup scheduler and frontend integrated with Plasma. It can automatically back up user data to another disk or storage location and supports versioned backup workflows through supported backup engines. It is particularly useful for configuring automatic backups of `/home` to a secondary disk on desktop or laptop systems.
+> **kup**: KDE backup scheduler and frontend integrated with Plasma. It can automatically back up user data to another disk or storage location and supports versioned backup workflows through supported backup engines. It is particularly useful for configuring automatic backups of `/home` to a secondary disk on desktop or laptop systems.  
 > **power-profiles-daemon**: power profile management for laptops, integrated with Plasma PowerDevil (Performance / Balanced / Power Save)
 
 ### 🪟 Enable Display Manager (Plasma Login Manager)
