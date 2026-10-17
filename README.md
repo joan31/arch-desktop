@@ -1,9 +1,9 @@
 # 🚀 Arch Desktop — Arch Linux Post-Install: Plasma Minimal / Hyprland
 
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 ![Arch Linux](https://img.shields.io/badge/Arch_Linux-blue?logo=arch-linux&logoColor=white)
 ![Plasma](https://img.shields.io/badge/Plasma_Minimal-1793d1?logo=kde&logoColor=white)
 ![Hyprland](https://img.shields.io/badge/Hyprland-black?logo=wayland&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square&logo=open-source-initiative)](LICENSE)
 
 **Plasma Minimal OR Hyprland — your choice!**
 
@@ -36,6 +36,7 @@ We will cover **common setup steps**, then branch into two chapters: **Plasma Mi
 ```bash
 pacman -S --needed mesa {,lib32-}vulkan-radeon xorg-{xwayland,xrandr}
 ```
+
 > **mesa**: OpenGL drivers  
 > **vulkan-radeon / lib32-vulkan-radeon**: Vulkan drivers for AMD GPUs (32-bit for gaming)  
 > **xorg-xwayland**: Run X11 apps inside Wayland  
@@ -45,6 +46,7 @@ pacman -S --needed mesa {,lib32-}vulkan-radeon xorg-{xwayland,xrandr}
 ```bash
 pacman -S --needed pipewire pipewire-{pulse,jack} wireplumber
 ```
+
 > **PipeWire**: Audio & video server  
 > **pipewire-pulse**: PulseAudio compatibility  
 > **pipewire-jack**: JACK compatibility  
@@ -55,6 +57,7 @@ pacman -S --needed pipewire pipewire-{pulse,jack} wireplumber
 pacman -S --needed zsh git fastfetch htop btop eza bat less tree colordiff man-db \
   lf bc lm_sensors 7zip fwupd xdg-user-dirs
 ```
+
 > **zsh**: modern shell  
 > **git**: version control  
 > **fastfetch**: system info in terminal  
@@ -75,6 +78,7 @@ pacman -S --needed zsh git fastfetch htop btop eza bat less tree colordiff man-d
 pacman -S --needed firefox libnotify libreoffice-fresh{,-fr} hunspell-{fr-comprehensive,es_es,en_us} \
   gimp keepassxc discord
 ```
+
 > **Firefox**: web browser  
 > **libnotify**: Firefox notifications support  
 > **LibreOffice Fresh**: office suite (optional french interface language)  
@@ -87,6 +91,7 @@ pacman -S --needed firefox libnotify libreoffice-fresh{,-fr} hunspell-{fr-compre
 ```bash
 pacman -S --needed ttf-{dejavu,liberation,nerd-fonts-symbols} noto-fonts{,-{emoji,cjk,extra}}
 ```
+
 > **DejaVu / Liberation**: standard system fonts (compatibilité + fallback)  
 > **Noto Fonts**: large Unicode coverage (emoji, CJK, extra scripts)  
 > **Nerd Fonts Symbols**: icons for terminal (powerline, dev, etc.)
@@ -95,6 +100,7 @@ pacman -S --needed ttf-{dejavu,liberation,nerd-fonts-symbols} noto-fonts{,-{emoj
 ```bash
 pacman -S --needed steam {,lib32-}{gamemode,mangohud} gamescope
 ```
+
 > **steam**: Steam client  
 > **gamemode / lib32-gamemode**: optimize performance while gaming  
 > **mangohud / lib32-mangohud**: FPS overlay and performance metrics  
@@ -194,12 +200,14 @@ pacman -S --needed code kcalc dolphin kdegraphics-thumbnailers ffmpegthumbs ark 
 ### 📦 Optional Apps
 
 ```bash
-pacman -S --needed kate kup power-profiles-daemon
+pacman -S --needed featherpad kup bup rsync power-profiles-daemon
 ```
 
-> **kate**: KDE text editor providing both Kate and KWrite. KWrite offers a simple text editor interface, while Kate provides more advanced editing and development features.  
-> **kup**: KDE backup scheduler and frontend integrated with Plasma. It can automatically back up user data to another disk or storage location and supports versioned backup workflows through supported backup engines. It is particularly useful for configuring automatic backups of `/home` to a secondary disk on desktop or laptop systems.  
-> **power-profiles-daemon**: power profile management for laptops, integrated with Plasma PowerDevil (Performance / Balanced / Power Save)
+> **featherpad**: Lightweight Qt-based text editor offering a simple, Notepad-like interface. Supports tabs, syntax highlighting, and search/replace while remaining fast and minimal. Integrates well with KDE Plasma through Qt theming.  
+> **kup**: KDE backup scheduler and frontend integrated with Plasma. It supports automatic backups of user data to another disk or storage location, with two backup modes.  
+> **bup**: Kup dependency for versioned and incremental backups, allowing recovery of previous file versions.  
+> **rsync**: Kup dependency for synchronized backups, maintaining a copy of files at the backup destination.  
+> **power-profiles-daemon**: Power profile management for laptops, integrated with Plasma PowerDevil (Performance / Balanced / Power Save).
 
 ### 🪟 Enable Display Manager (Plasma Login Manager)
 
@@ -218,6 +226,7 @@ systemctl enable plasmalogin.service
 pacman -S --needed hyprland awww waybar rofi mako hypridle hyprlock wl-clipboard cliphist \
   grim slurp swappy qt{5,6}{ct,-wayland} xdg-{desktop-portal-{gtk,hyprland}}
 ```
+
 > **hyprland**: window manager (Wayland)  
 > **awww**: wallpaper manager  
 > **waybar**: status bar  
@@ -232,8 +241,10 @@ pacman -S --needed hyprland awww waybar rofi mako hypridle hyprlock wl-clipboard
 
 ### 📦 Core Apps
 ```bash
-pacman -S --needed thunar imv mpv mpv-mpris playerctl
+pacman -S --needed foot thunar imv mpv mpv-mpris playerctl
 ```
+
+> **foot**: terminal 
 > **Thunar**: file manager  
 > **imv**: image viewer  
 > **mpv**: video player  
@@ -244,6 +255,7 @@ pacman -S --needed thunar imv mpv mpv-mpris playerctl
 ```bash
 pacman -S --needed pulsemixer bluez-utils cava
 ```
+
 > **pulsemixer**: terminal audio mixer  
 > **bluez-utils**: Bluetooth tools  
 > **cava**: audio visualizer
@@ -252,6 +264,7 @@ pacman -S --needed pulsemixer bluez-utils cava
 ```bash
 pacman -S --needed gnome-keyring gnome-themes-extra gtk-engine-murrine xsettingsd
 ```
+
 > **gnome-keyring**: system credential store, used by applications such as kDrive to securely persist authentication credentials/tokens  
 > **gnome-themes-extra**: extra GTK themes  
 > **gtk-engine-murrine**: GTK2 theme engine  
@@ -279,6 +292,7 @@ yay
 ```bash
 yay -S arch-update ventoy-bin proton-ge-custom-bin xpadneo-dkms-git kdrive-bin rtl8761b-firmware
 ```
+
 > **arch-update**: Arch Linux update notifier  
 > **ventoy-bin**: bootable USB creation tool  
 > **proton-ge-custom-bin**: custom Proton build for gaming  
