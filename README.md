@@ -115,7 +115,7 @@ pacman -S --needed steam {,lib32-}{gamemode,mangohud} gamescope
 ```bash
 pacman -S --needed aurorae bluedevil breeze breeze-cursors breeze-gtk breeze-plymouth drkonqi \
   kactivitymanagerd kde-cli-tools kde-gtk-config kdecoration kdeplasma-addons \
-  kgamma kglobalacceld kinfocenter kmenuedit knighttime kpipewire kscreen kscreenlocker \
+  kglobalacceld kinfocenter kmenuedit knighttime kpipewire kscreen kscreenlocker \
   ksshaskpass ksystemstats kwallet-pam kwayland kwin layer-shell-qt libkscreen libksysguard \
   libplasma milou ocean-sound-theme oxygen oxygen-cursors oxygen-sounds plasma-activities \
   plasma-activities-stats plasma-browser-integration plasma-desktop plasma-disks \
@@ -133,8 +133,7 @@ pacman -S --needed aurorae bluedevil breeze breeze-cursors breeze-gtk breeze-ply
 > **kde-cli-tools**: command-line tools for KDE  
 > **kde-gtk-config**: GTK theme integration  
 > **kdecoration**: window decoration library  
-> **kdeplasma-addons**: extra widgets and applets  
-> **kgamma**: monitor gamma settings  
+> **kdeplasma-addons**: extra widgets and applets   
 > **kglobalacceld**: global shortcut daemon  
 > **kinfocenter**: system information center  
 > **kmenuedit**: application menu editor  
